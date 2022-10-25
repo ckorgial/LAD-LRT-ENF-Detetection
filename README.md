@@ -6,7 +6,7 @@ This repo contains the codes of the proposed Robust Least Absolute Deviations (L
 
 For the evaluation of our method we used the H0 and H1 folders of the [ENF-WHU-Dataset](https://github.com/ghuawhu/ENF-WHU-Dataset/tree/master/ENF-WHU-Dataset).
 
-# Scripts
+# MATLAB Codes
 
 1. **Calculate_Accuracy.m:**
 2. **Calculate_ROC_AUC.m:**
