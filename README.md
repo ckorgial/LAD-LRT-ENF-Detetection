@@ -8,7 +8,7 @@ For the evaluation of our method we used the H0 and H1 folders of the [ENF-WHU-D
 
 # MATLAB Codes
 
-1. **Calculate_Accuracy.m:**
-2. **Calculate_ROC_AUC.m:**
-3. **Test_Periodograms.m:** 
-4. **Calculate_Thresholds.m:**
+1. **Calculate_Accuracy.m**
+2. **Calculate_ROC_AUC.m**
+3. **Test_Periodograms.m** 
+4. **Calculate_Thresholds.m**
