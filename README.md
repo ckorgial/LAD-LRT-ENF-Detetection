@@ -4,4 +4,4 @@ This repo contains the codes of the proposed Robust Least Absolute Deviations (L
 
 # Dataset
 
-For the evaluation of our method we used the H0 and H1 folders of the [ENF-WHU-Dataset]{https://github.com/ghuawhu/ENF-WHU-Dataset/tree/master/ENF-WHU-Dataset}.
+For the evaluation of our method we used the H0 and H1 folders of the [ENF-WHU-Dataset](https://github.com/ghuawhu/ENF-WHU-Dataset/tree/master/ENF-WHU-Dataset).
