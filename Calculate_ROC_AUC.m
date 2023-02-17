@@ -34,8 +34,7 @@ load Threshold_info_5_1_10
 % thre3 = linspace(mean30(1)-2*sqrt(var30(1)),mean30(1)+20*sqrt(var30(1)),N_thre);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
-path         = 'C:\Users\30694\Documents\PHD\Codes\ENF_Detection\Datasets\Recordings\';
-%path         ='C:\Users\costas\Desktop\TEST_Recordings\Final_Code\Recordings\';
+path         = '';
 H0_index     = dir(strcat(path,'H0'));
 H1_index     = dir(strcat(path,'H1'));
 ground_truth = [ones(1,length(H1_index)-2),zeros(1,length(H0_index)-2)];
