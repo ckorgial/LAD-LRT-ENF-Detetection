@@ -16,4 +16,4 @@ For the evaluation of our method we used the H0 and H1 folders of the [ENF-WHU-D
 
 Feel free to send us a message for any issue.
 
-***Christos Korgialas (ckorgial@csd.auth.gr) and Constantine Kotropoulos (costas@aiia.csd.auth.gr)***
+***Christos Korgialas (ckorgial@csd.auth.gr)***
