@@ -18,6 +18,17 @@ For the evaluation of our method we used the H0 and H1 folders of the [ENF-WHU-D
 
 # Citation
 
+```
+@inproceedings{Korgialas_2023,	
+doi = {10.1109/icassp49357.2023.10095869},	
+url = {https://doi.org/10.1109%2Ficassp49357.2023.10095869},	
+year = 2023,	month = {jun},	
+publisher = {{IEEE}},	
+author = {Christos Korgialas and Constantine Kotropoulos},	
+title = {Electric Network Frequency Detection Using Least Absolute Deviations},	
+booktitle = {2023 {IEEE} International Conference on Acoustics, Speech and Signal Processing ({ICASSP})}}
+```
+
 # Authors
 
 Feel free to send us a message for any issue.
