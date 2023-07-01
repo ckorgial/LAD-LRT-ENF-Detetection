@@ -3,7 +3,8 @@
 %
 % 1. LAD-LRT - Median Threshold
 % 2. LS-LRT - Median Threshold
-% 3. LS-LRT - State of the Art Threshold
+% 3. LS-LRT
+% 4. naive-LRT
 %
 % versus recording length using real-world audio recordings.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -33,18 +34,20 @@ thre2 = mean20+2*sqrt(var20);
 thre3 = mean30+2*sqrt(var30);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
-path         = '';
+path         = 'C:\Users\30694\Documents\PHD\Codes\ENF_Detection\Datasets\Recordings\';
+H0_index     = dir(strcat(path,'H0'));
 H1_index     = dir(strcat(path,'H1'));
 ground_truth = [ones(1,length(H1_index)-2),zeros(1,length(H0_index)-2)];
 
 result1      = zeros(length(duration),(length(H1_index)-2+length(H0_index)-2));  % LAD-LRT - Median
 result2      = zeros(length(duration),(length(H1_index)-2+length(H0_index)-2));  % LS-LRT - Median
-result3      = zeros(length(duration),(length(H1_index)-2+length(H0_index)-2));  % LS-LRT - State of the Art
-result4      = zeros(length(duration),(length(H1_index)-2+length(H0_index)-2));  % Naive LRT
+result3      = zeros(length(duration),(length(H1_index)-2+length(H0_index)-2));  % LS-LRT
+result4      = zeros(length(duration),(length(H1_index)-2+length(H0_index)-2));  % naive-LRT
 
 ACC1         = zeros(1,length(duration));
 ACC2         = zeros(1,length(duration));
 ACC3         = zeros(1,length(duration));
+ACC4         = zeros(1,length(duration));
 
 O_TP1 = zeros(1,length(duration));
 O_TN1 = zeros(1,length(duration));
@@ -62,7 +65,6 @@ O_TP4 = zeros(1,length(duration));
 O_TN4 = zeros(1,length(duration));
 O_FP4 = zeros(1,length(duration));
 O_FN4 = zeros(1,length(duration));
-
 
 
 for i = 1:(length(H1_index)-2+length(H0_index)-2)
@@ -108,6 +110,7 @@ for i = 1:(length(H1_index)-2+length(H0_index)-2)
             for m = 1:99
                 fm  = fcc + (m-50)*fs/(60*N);  
                 Hm  = [cos(2*pi*T*fm*(0:N-1))',sin(2*pi*T*fm*(0:N-1))'];
+                laplacian_error = (x_filtered' - Hm*theta);
                 zm  = norm(x_filtered' - Hm*theta,1); % Fix theta
                 if zm < zmin
                     fcc_new=fm;
@@ -137,13 +140,13 @@ for i = 1:(length(H1_index)-2+length(H0_index)-2)
         Test_Statistic3  = 2/N*(x_filtered*Hc3)*(Hc3'*x_filtered')/((norm(x_filtered).^2)); % LS-LRT
 
         Hc4              =[cos(2*pi*T*100*(0:N-1))',sin(2*pi*T*100*(0:N-1))'];
-        Test_Statistic4  = 2/N*(x_filtered*Hc4)*(Hc4'*x_filtered')/((norm(x_filtered).^2)); % Naive LRT
+        Test_Statistic4  = 2/N*(x_filtered*Hc4)*(Hc4'*x_filtered')/((norm(x_filtered).^2)); % naive-LRT
         
         if Test_Statistic3 >= thre2(j)
-            result3(j,i) = 1; % 3. Results
+            result3(j,i) = 1; 
         end
          if Test_Statistic4 >= thre3(j)
-            result4(j,i) = 1; % 4. Results
+            result4(j,i) = 1;
         end 
     end
 end
@@ -154,10 +157,10 @@ thre2m = median(p2,2);
 for j = 1:length(duration)
   for i = 1:(length(H1_index)-2+length(H0_index)-2)    
      if (p1(j,i) >= thre1m(j))
-        result1(j,i) = 1; % 1. Results
+        result1(j,i) = 1;
      end
      if (p2(j,i) >= thre2m(j))
-        result2(j,i) = 1; % 2. Results
+        result2(j,i) = 1;
      end   
   end
 end
