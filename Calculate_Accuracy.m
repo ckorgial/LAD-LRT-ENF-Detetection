@@ -34,7 +34,7 @@ thre2 = mean20+2*sqrt(var20);
 thre3 = mean30+2*sqrt(var30);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
-path         = 'C:\Users\30694\Documents\PHD\Codes\ENF_Detection\Datasets\Recordings\';
+path         = '';
 H0_index     = dir(strcat(path,'H0'));
 H1_index     = dir(strcat(path,'H1'));
 ground_truth = [ones(1,length(H1_index)-2),zeros(1,length(H0_index)-2)];
