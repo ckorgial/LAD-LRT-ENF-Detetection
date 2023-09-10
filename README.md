@@ -1,6 +1,6 @@
 # Robust LAD-LRT ENF Detetection
 
-We would like to acknowledge (Han et al.) for their work [Detection of Electric Network Frequency in Audio Recordings–From Theory to Practical Detectors](https://ieeexplore.ieee.org/document/9143185) which inspired us to develop our robust detector. We would like to thank them for sharing their codes in [ENF_Detection](https://github.com/ghuawhu/ENF-WHU-Dataset/tree/master/ENF_Detection) folder. 
+We would like to acknowledge (Hua et al.) for their work [Detection of Electric Network Frequency in Audio Recordings–From Theory to Practical Detectors](https://ieeexplore.ieee.org/document/9143185) which inspired us to develop our robust detector. We would like to thank them for sharing their codes in [ENF_Detection](https://github.com/ghuawhu/ENF-WHU-Dataset/tree/master/ENF_Detection) folder. 
 
 # Our Paper
 
