@@ -30,6 +30,10 @@ title = {Electric Network Frequency Detection Using Least Absolute Deviations},
 booktitle = {2023 {IEEE} International Conference on Acoustics, Speech and Signal Processing ({ICASSP})}}
 ```
 
+# Acknowledgements
+
+This research was supported by the Hellenic Foundation for Research and Innovation (H.F.R.I.) under the ``2nd Call for H.F.R.I. Research Projects to support Faculty Members & Researchers" (Project Number: 3888).
+
 # Authors
 
 Feel free to send us a message for any issue.
