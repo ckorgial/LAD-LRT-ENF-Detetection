@@ -38,4 +38,4 @@ This research was supported by the Hellenic Foundation for Research and Innovati
 
 Feel free to send us a message for any issue.
 
-***Christos Korgialas (ckorgial@csd.auth.gr)***
+***Christos Korgialas (ckorgial@csd.auth.gr) and Constantine Kotropoulos (costas@csd.auth.gr)***
